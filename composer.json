@@ -1,0 +1,10 @@
+{
+    "name": "gaodun/log",
+    "description": "log by oss",
+    "type": "library",
+    "require": {
+        "monolog/monolog": "^1.22",
+        "aliyuncs/oss-sdk-php": "^2.2"
+    },
+    "license": "1.0"
+}
