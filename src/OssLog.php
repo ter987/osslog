@@ -21,17 +21,17 @@ class OssLog extends AbstractProcessingHandler
 
     public function __construct()
     {
-        $this->object = uniqid();
+        $this->object = OSS_PREFIX.date('Y-m-d').'-'.uniqid();
         $this->ossClient = new OssClient(OSS_ACCESS_KEY_ID, OSS_ACCESS_KEY_SECRET, OSS_END_POINT);
     }
 
     public function write(array $record)
-    {var_dump($record);exit;
-        foreach ($record as $val) {
-            if (!isset($position)) {
-                $position = 0;
-            }
-            $position = $this->ossClient->appendObject(OSS_LOG_BUKET, $this->object, $val, $position);
+    {
+        try {
+            $this->ossClient->putObject(OSS_LOG_BUKET, $this->object, $record['formatted']);
+        } catch (OssException $e) {
+            echo $e->getMessage();
+            return false;
         }
     }
 }
