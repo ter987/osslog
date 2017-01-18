@@ -6,5 +6,8 @@
         "monolog/monolog": "^1.22",
         "aliyuncs/oss-sdk-php": "^2.2"
     },
+    "autoload":{
+        "psr-4": {"gaodun\\log\\": "src/"}
+    },
     "license": "1.0"
 }
