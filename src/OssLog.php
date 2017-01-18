@@ -26,7 +26,7 @@ class OssLog extends AbstractProcessingHandler
     }
 
     public function write(array $record)
-    {
+    {var_dump($record);exit;
         foreach ($record as $val) {
             if (!isset($position)) {
                 $position = 0;
