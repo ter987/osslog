@@ -7,7 +7,7 @@
  * Time: 9:38
  */
 
-namespace gaodun\log;
+namespace gaodun\osslog;
 
 use Monolog\Logger;
 use Monolog\Handler\AbstractProcessingHandler;
@@ -34,5 +34,5 @@ class OssLog extends AbstractProcessingHandler
             return false;
         }
     }
-    
+
 }
