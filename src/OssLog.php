@@ -34,4 +34,5 @@ class OssLog extends AbstractProcessingHandler
             return false;
         }
     }
+    
 }
