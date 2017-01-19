@@ -1,5 +1,5 @@
 {
-    "name": "gaodun/log",
+    "name": "gaodun/osslog",
     "description": "log by oss",
     "type": "library",
     "require": {
@@ -7,7 +7,7 @@
         "aliyuncs/oss-sdk-php": "^2.2"
     },
     "autoload":{
-        "psr-4": {"gaodun\\log\\": "src/"}
+        "psr-4": {"gaodun\\osslog\\": "src/"}
     },
     "license": "1.0"
 }
